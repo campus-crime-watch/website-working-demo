@@ -1,0 +1,119 @@
+/* Color Theme Swatches in Hex */
+.Incert-1-hex { color: #038C33; }
+.Incert-2-hex { color: #02732A; }
+.Incert-3-hex { color: #025920; }
+.Incert-4-hex { color: #014017; }
+.Incert-5-hex { color: #0D0D0D; }
+
+/* Color Theme Swatches in RGBA */
+.Incert-1-rgba { color: rgba(2, 140, 50, 1); }
+.Incert-2-rgba { color: rgba(2, 114, 41, 1); }
+.Incert-3-rgba { color: rgba(1, 89, 32, 1); }
+.Incert-4-rgba { color: rgba(1, 63, 23, 1); }
+.Incert-5-rgba { color: rgba(12, 12, 12, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Incert-1-hsla { color: hsla(140, 96, 28, 1); }
+.Incert-2-hsla { color: hsla(140, 96, 22, 1); }
+.Incert-3-hsla { color: hsla(140, 96, 17, 1); }
+.Incert-4-hsla { color: hsla(140, 96, 12, 1); }
+.Incert-5-hsla { color: hsla(0, 0, 5, 1); }
+
+body {
+  margin: 0; 
+  padding: 0;
+  background-color: #333;
+}
+
+nav {
+    background-color: #333;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .title {
+    color: white;
+    font-size: 24px;
+    margin-left: 20px;
+    font-family: 'Bruno Ace', cursive;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:'Ubuntu', sans-serif;
+    ;
+  }
+  
+  nav li a:hover {
+    background-color: #0D0D0D;
+  }
+
+#landing-page {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    position:relative;
+  }
+ 
+  #landing-page h1 {
+    font-family: 'Bruno Ace', cursive;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:#02732A
+  }
+  #landing-page p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #888;
+    font-family:'Ubuntu', sans-serif;
+    margin-bottom: 0;
+  }
+
+#map {
+  margin: 150px auto;
+  text-align: center;
+}
+
+#clery {
+  text-align: left;
+  margin: 50px auto;
+  max-width: 800px;
+  position:relative;
+  color:white
+}
+  #clery h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#02732A;
+  }
+
+  #clery p {
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  #clery a {
+    color:#038C33
+  }
