@@ -20,10 +20,13 @@ function initializeMap() {
     const feature = features[0];
 
 /* a popup */
-  const popup = new mapboxgl.Popup({ offset: [0, -15] })
+  const popup = new mapboxgl.Popup({ offset: [0, -15],className: 'custom-popup' })
   .setLngLat(feature.geometry.coordinates)
   .setHTML(
-    `<p>${feature.properties.nature}<br>${feature.properties.date}</p>`
+    `<p> 
+      <b>Crime Type</b>: ${feature.properties.nature}<br> 
+      <b>Date</b>: ${feature.properties.date}<br>
+      <b>Status</b>: ${feature.properties.disposition}</p>`
   )
   .addTo(map);});
 

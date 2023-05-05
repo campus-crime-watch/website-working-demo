@@ -293,6 +293,21 @@ nav {
   margin: 0 auto;
 }
 
+.custom-popup .mapboxgl-popup-content {
+  background-color: rgba(76, 83, 87, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.custom-popup .mapboxgl-popup-tip {
+  border-top-color: #424A4C;
+}
+
+
+
 
 #clery,
 #about {
