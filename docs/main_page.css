@@ -286,6 +286,14 @@ nav {
   text-align: center;
 }
 
+#mapbox {
+  position: relative;
+  width:75%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+
 #clery,
 #about {
   text-align: left;

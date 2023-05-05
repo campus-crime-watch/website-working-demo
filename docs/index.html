@@ -4,6 +4,8 @@
     <link href="main_page.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap" rel="stylesheet">  
     <script src="scroll.js" defer ></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
   </head>
 
 
@@ -43,9 +45,10 @@
       <p>where you can find... some text introducing this news app</p>
     </section>
 
-    <section class="map" id="mapSection">
+    <section class="map">
       <h3>and here goes the map which i have no idea how to make ;-;;;</h3>
-      <img src="https://i.ibb.co/Y2h28mt/2023-04-23-6-10-26.png" />
+      <div id='mapbox'></div>
+      <script src="map.js" defer></script>
     </section>
   
     <section id="dataSection">
