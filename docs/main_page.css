@@ -281,8 +281,44 @@ nav {
     margin-bottom: 0;
   }
 
+/* News Ticker */
+.news-ticker {
+  margin: 150px auto 100px;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(82, 82, 82);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.news-ticker ul {
+  list-style-type: none;
+  margin: 5px;
+  padding: 0;
+  display: inline-block;
+  white-space: nowrap;
+  animation: newsTicker 80s linear infinite;
+}
+
+.news-ticker li {
+  display: inline;
+  padding: 20px;
+}
+
+@keyframes newsTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .map {
-  margin: 500px auto 100px;
+  margin: 400px auto 100px;
   text-align: center;
 }
 
