@@ -1,6 +1,6 @@
 // Set the RSS feed URL
 const rssFeedUrl = "https://stanforddaily.com/feed/";
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+const CORS_PROXY = "https://intense-caverns-75795.herokuapp.com/"
 
 // Find the news ticker element
 const ticker = document.getElementById("ticker");
@@ -20,8 +20,12 @@ parser.parseURL(CORS_PROXY + rssFeedUrl, function(err, feed) {
         console.log(date)
         date_string = date.toLocaleDateString("en-US", options)
         month = date.getMonth()+1
+        const a = document.createElement("a");
         const li = document.createElement("li");
-        li.textContent = "[" + date_string + "] " + item.title;
+        a.textContent = "[" + date_string + "] " + item.title;
+
+        a.setAttribute('href', item.link);
+        li.appendChild(a)
         ticker.appendChild(li);
     }
   }

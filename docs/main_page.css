@@ -304,9 +304,20 @@ nav {
   animation: newsTicker 50s linear infinite;
 }
 
-.news-ticker li {
+.news-ticker li{
   display: inline;
   padding: 20px;
+  color:rgb(255, 255, 255)
+}
+
+.news-ticker a{
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.news-ticker a:hover{
+  color:rgb(255, 255, 255);
+  text-decoration: underline dotted;
 }
 
 @keyframes newsTicker {
