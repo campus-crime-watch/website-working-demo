@@ -300,7 +300,8 @@ nav {
   padding: 0;
   display: inline-block;
   white-space: nowrap;
-  animation: newsTicker 80s linear infinite;
+  text-align: center;
+  animation: newsTicker 50s linear infinite;
 }
 
 .news-ticker li {
