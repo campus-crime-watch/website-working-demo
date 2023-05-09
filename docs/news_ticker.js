@@ -1,32 +1,23 @@
-// Set the RSS feed URL
-const rssFeedUrl = "https://stanforddaily.com/feed/";
-const CORS_PROXY = "https://intense-caverns-75795.herokuapp.com/"
-
-// Find the news ticker element
 const ticker = document.getElementById("ticker");
 
-var options = { weekday: 'long', month: 'long', day: 'numeric' };
+async function update() {
+    
+    const res = await fetch('data/news_feed.json')
+    data = await res.json();
+    feed = data["news"]
 
-// Parse the RSS feed using a third-party library such as RSS Parser
-const parser = new RSSParser();
-parser.parseURL(CORS_PROXY + rssFeedUrl, function(err, feed) {
-  if (err) throw err;
-  
-  // Loop through the feed items and create li elements for each one
-  for (let i = 0; i < feed.items.length; i++) {
-    const item = feed.items[i];
-    if (item.categories.includes("Crime & Safety")) {
-        date = new Date(item.pubDate)
-        console.log(date)
-        date_string = date.toLocaleDateString("en-US", options)
-        month = date.getMonth()+1
+    for (let i = 0; i < feed.length; i++) {
+        title = feed[i]["title"]
+        date = feed[i]["date"]
+        link = feed[i]["link"]
+
         const a = document.createElement("a");
         const li = document.createElement("li");
-        a.textContent = "[" + date_string + "] " + item.title;
-
-        a.setAttribute('href', item.link);
-        li.appendChild(a)
+        a.textContent = "[" + date + "] " + title;
+        a.setAttribute('href', link);
+        li.appendChild(a);
         ticker.appendChild(li);
     }
-  }
-});
+}
+
+update()
